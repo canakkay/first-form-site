@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Yapısı</title>
+</head>
+<body style="background-color: aquamarine;">
+<!--
+    fieldset =>> Tablonun sınırlarını çizer
+    legend =>> Tabloya başlık verir
+    input =>> veri girişi yapabileceği giriş alanı tanımlar
+    radio =>> cinsiyet seçimi hibi tekli seçeneklerde kullanılır
+    checkbox =>> çoklu olarak da seçilmesi istenen nesneler seçilir
+-->
+
+    <form action="submit.html">
+        <fieldset style="border: 10px solid royalblue ;">
+            <legend style="font-weight: bold;">Form Sitesi</legend>
+
+            <table cellpadding="5px" cellspacing="10px">
+                <tr>
+                    <td>Adı:</td>
+                    <td><input type="text" name="ad"></td>
+                </tr>
+
+                <tr>
+                    <td>Soyadı:</td>
+                    <td><input type="text" name="soyad"></td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email"  name="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Şifre:</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+
+                <tr>
+                    <td>Cinsiyet:</td>
+                    <td>
+                    <input type="radio" name="cinsiyet" value="Erkek">Erkek
+                    <input type="radio" name="cinsiyet" value="Kadın">Kadın
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Hobiler:</td>
+                    <td>
+                        <input type="checkbox" name="hobi" value="kitap">Kitap Okumak
+                        <input type="checkbox" name="hobi" value="müzik">Müzik Dinlemek
+                        <input type="checkbox" name="hobi" value="Satranç">Satranç Oynamak
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Gönder">
+                        <input type="button" value="Düzenle">
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+        <hr>
+
+        <fieldset style="border: 10px solid rgb(45, 84, 84);">
+
+            <legend style="font-weight: bolder;">Ek Bigiler</legend>
+            <table cellpadding="5px" cellspacing="10px">
+                <tr>
+                    <td>Programlama</td>
+                    <td>
+                        <select id="programlama">
+                            <option>Html</option>
+                            <option>Css</option>
+                            <option>Php</option>
+                        </select>
+                    </td>
+                   
+                </tr>
+                
+                <tr>
+    
+                    <td>Datalist</td>
+                    <td>
+                        <input list="tarayici">
+                        <datalist id="tarayici">
+                            <option value="Firefox"></option>
+                            <option value="Waterfox"></option>
+                            <option value="Opera"></option>
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Adres</td>
+
+                    <td>
+                      <textarea name="adres" id="adres" cols="20" rows="5"></textarea>
+                    </td>
+
+                </tr>
+
+
+            </table>
+            
+        </fieldset>
+
+
+    </form>
+    
+</body>
+</html>
